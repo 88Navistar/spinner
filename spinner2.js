@@ -1,4 +1,4 @@
-spinners = ["\r|   ", "\r/   ", "\r-   ", "\r|\   "];
+spinners = ["\r|   ", "\r/   ", "\r-   ", "\r\\   ",'\r|   ','\r/   ','\r-   ','\r\\'   , '\r|   '];
 //const spinners = '\r|    \r/    \r-    \r|'  ; 
 let delay = 0;
 for (const spin of spinners) {
@@ -6,4 +6,9 @@ for (const spin of spinners) {
     process.stdout.write(spin); 
   }, delay);
     delay += 400
+    
 };
+
+setTimeout(() => {
+  process.stdout.write('\n');
+}, delay + 400)
